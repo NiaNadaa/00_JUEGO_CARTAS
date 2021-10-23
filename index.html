@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juego de memoria: Las 3 estaciones</title>
-    <link rel="stylesheet" href="style.css" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   </head>
-  <body>
+
+  <body onload="mezclarCartas()">
     <div id="juego">
       <div id="informacion">
-        <h1>Juego de memoria: <br />Las 3 estaciones</h1>
-        <div class="botones">
-          <input type="button" value="Iniciar" onclick="crearTablero()" />
-          <input type="button" value="Reset" onclick="resetearJuego()" />
-        </div>
-        <span id="resultados"></span>
+        <h1>Juego de Memoria</h1>
+        <p class="cajas">
+          <strong>Movimientos:</strong> <span id="movimientos"></span>
+        </p>
         <div id="segundos">
-          <p>Tiempo: <span class="contador">0</span> segundos</p>
+          <p class="cajas">
+            <strong>Tiempo: </strong><span class="contador">0</span> segundos
+          </p>
         </div>
-        <!--CONTADOR INTENTOS
-          <div id="botonContador" class="boton">
-            <span id="contador">nº</span>
-            Intentos
-          </div>
-       -->
       </div>
-      <!-- cierra div id informacion -->
-      <div id="tablero" class="tablero"></div>
 
-      <!-- cierra div id tablero -->
+      <table id="ganador">
+        <tr>
+          <td id="0" onclick="elegirCarta(this.id)"></td>
+          <td id="1" onclick="elegirCarta(this.id)"></td>
+          <td id="2" onclick="elegirCarta(this.id)"></td>
+          <td id="3" onclick="elegirCarta(this.id)"></td>
+        </tr>
+
+        <tr>
+          <td id="4" onclick="elegirCarta(this.id)"></td>
+          <td id="5" onclick="elegirCarta(this.id)"></td>
+          <td id="6" onclick="elegirCarta(this.id)"></td>
+          <td id="7" onclick="elegirCarta(this.id)"></td>
+        </tr>
+        <tr>
+          <td id="8" onclick="elegirCarta(this.id)"></td>
+          <td id="9" onclick="elegirCarta(this.id)"></td>
+          <td id="10" onclick="elegirCarta(this.id)"></td>
+          <td id="11" onclick="elegirCarta(this.id)"></td>
+        </tr>
+        <tr>
+          <td id="12" onclick="elegirCarta(this.id)"></td>
+          <td id="13" onclick="elegirCarta(this.id)"></td>
+          <td id="14" onclick="elegirCarta(this.id)"></td>
+          <td id="15" onclick="elegirCarta(this.id)"></td>
+        </tr>
+      </table>
     </div>
-    <!-- cierra div id juego -->
-
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="index.js"></script>
-    <script>
-      let contador = 0;
-      function refrescarContador() {
-        $(".contador").html(contador);
-      }
-      function incrementarContador() {
-        contador++;
-      }
-      setInterval(function () {
-        incrementarContador();
-        refrescarContador();
-      }, 1000);
-    </script>
   </body>
 </html>
