@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de memoria: Las 3 estaciones</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="juego">
+      <div id="informacion">
+        <h1>Juego de memoria: <br />Las 3 estaciones</h1>
+        <div class="botones">
+          <input type="button" value="Iniciar" onclick="iniciarJuego()" />
+          <input type="button" value="Reset" onclick="resetearJuego()" />
+        </div>
+        <!-- <div id="botonera">
+          <div id="botonContador" class="boton">
+            <span id="contador">nº</span>
+            Intentos
+          </div>
+          <div id="Temporizador" class="boton">
+            <span id="timer">nº</span>
+            Segundos
+          </div>
+        </div> -->
+      </div>
+      <!-- cierra div id informacion -->
+
+      <div id="tablero">
+        <table>
+          <tr>
+            <td id="0" class="carta"></td>
+            <td id="1" class="carta"></td>
+            <td id="2" class="carta"></td>
+            <td id="3" class="carta"></td>
+          </tr>
+          <tr>
+            <td id="4" class="carta"></td>
+            <td id="5" class="carta"></td>
+            <td id="6" class="carta"></td>
+            <td id="7" class="carta"></td>
+          </tr>
+          <tr>
+            <td id="8" class="carta"></td>
+            <td id="9" class="carta"></td>
+            <td id="10" class="carta"></td>
+            <td id="11" class="carta"></td>
+          </tr>
+          <tr>
+            <td id="12" class="carta"></td>
+            <td id="13" class="carta"></td>
+            <td id="14" class="carta"></td>
+            <td id="15" class="carta"></td>
+          </tr>
+        </table>
+      </div>
+      <!-- cierra div id tablero -->
+    </div>
+    <!-- cierra div id juego -->
+  </body>
+</html>
