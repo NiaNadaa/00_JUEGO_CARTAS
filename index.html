@@ -14,16 +14,15 @@
           <input type="button" value="Iniciar" onclick="iniciarJuego()" />
           <input type="button" value="Reset" onclick="resetearJuego()" />
         </div>
-        <!-- <div id="botonera">
+        <div id="segundos">
+          <p>Tiempo: <span class="contador">0</span> segundos</p>
+        </div>
+        <!--CONTADOR INTENTOS
           <div id="botonContador" class="boton">
             <span id="contador">nº</span>
             Intentos
           </div>
-          <div id="Temporizador" class="boton">
-            <span id="timer">nº</span>
-            Segundos
-          </div>
-        </div> -->
+       -->
       </div>
       <!-- cierra div id informacion -->
 
@@ -58,5 +57,20 @@
       <!-- cierra div id tablero -->
     </div>
     <!-- cierra div id juego -->
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      let contador = 0;
+      function refrescarContador() {
+        $(".contador").html(contador);
+      }
+      function incrementarContador() {
+        contador++;
+      }
+      setInterval(function () {
+        incrementarContador();
+        refrescarContador();
+      }, 1000);
+    </script>
   </body>
 </html>
