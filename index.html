@@ -11,9 +11,10 @@
       <div id="informacion">
         <h1>Juego de memoria: <br />Las 3 estaciones</h1>
         <div class="botones">
-          <input type="button" value="Iniciar" onclick="iniciarJuego()" />
+          <input type="button" value="Iniciar" onclick="crearTablero()" />
           <input type="button" value="Reset" onclick="resetearJuego()" />
         </div>
+        <span id="resultados"></span>
         <div id="segundos">
           <p>Tiempo: <span class="contador">0</span> segundos</p>
         </div>
@@ -25,40 +26,14 @@
        -->
       </div>
       <!-- cierra div id informacion -->
+      <div id="tablero" class="tablero"></div>
 
-      <div id="tablero">
-        <table>
-          <tr>
-            <td id="0" class="carta"></td>
-            <td id="1" class="carta"></td>
-            <td id="2" class="carta"></td>
-            <td id="3" class="carta"></td>
-          </tr>
-          <tr>
-            <td id="4" class="carta"></td>
-            <td id="5" class="carta"></td>
-            <td id="6" class="carta"></td>
-            <td id="7" class="carta"></td>
-          </tr>
-          <tr>
-            <td id="8" class="carta"></td>
-            <td id="9" class="carta"></td>
-            <td id="10" class="carta"></td>
-            <td id="11" class="carta"></td>
-          </tr>
-          <tr>
-            <td id="12" class="carta"></td>
-            <td id="13" class="carta"></td>
-            <td id="14" class="carta"></td>
-            <td id="15" class="carta"></td>
-          </tr>
-        </table>
-      </div>
       <!-- cierra div id tablero -->
     </div>
     <!-- cierra div id juego -->
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="index.js"></script>
     <script>
       let contador = 0;
       function refrescarContador() {
