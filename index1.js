@@ -1,7 +1,3 @@
-/* Array con cartas, habíamos pensado hacer un array de 8 objetos y luego duplicarlos,
-pero por no complicarnos y como hemos visto ejemplos en internet que lo hacían así, hemos
-hecho un array con 8 objetos repetido dos veces */
-
 const array = [
   {
     dibujo: "dibujo1",
@@ -69,18 +65,10 @@ const array = [
   },
 ];
 
-//--------------------------------------------------------------------------------
-
-/* Variables necesarias para la funcion elegirCarta */
-
 let seleccionadas = 0;
 let cartaAnterior = -1;
 let movimientos = 0;
 let aciertos = 0;
-
-//--------------------------------------------------------------------------------
-
-/* Función para poner las cartas de forma aleatoria, asignarle el estilo y el reverso */
 
 function mezclarCartas() {
   array.sort(() => Math.random() - 0.5);
@@ -90,10 +78,6 @@ function mezclarCartas() {
   }
 }
 
-//--------------------------------------------------------------------------------
-
-/* Funciones para mostrar la imagen o el fondo de la carta seleccionada */
-
 function mostrarCarta(i) {
   document.getElementById(i).style.backgroundImage =
     "url('" + array[i].imagen + "')";
@@ -102,11 +86,6 @@ function mostrarCarta(i) {
 function ocultarCarta(i) {
   document.getElementById(i).style.backgroundImage = "url('img/reverso.png')";
 }
-
-//--------------------------------------------------------------------------------
-
-/* Función elegirCarta, compara las dos cartas seleccionadas, si coinciden, las deja mostradas,
-si no coinciden las vuelve a ocultar despues de 1 segundo */
 
 function elegirCarta(i) {
   mostrarCarta(i);
@@ -131,7 +110,8 @@ function elegirCarta(i) {
   if (aciertos == 8) {
     document.getElementById(
       "ganador"
-    ).innerHTML = `<p class="felicitacion"><strong>Felicidades!<strong><br>Encontraste todas las parejas<p>`;
+    ).innerHTML = `<p class="felicitacion"><strong>Felicidades!<strong><br>Encotraste todas las parejas<p>`;
+    document.getElementById("ganador").style.border = "3px solid #cb3b1c";
     document.getElementById("ganador").style.padding = "50px";
     document.getElementById("ganador").style.borderRadius = "5px";
     document.getElementById("ganador").style.position = "absolute";
@@ -139,12 +119,9 @@ function elegirCarta(i) {
     document.getElementById("ganador").style.left = "50%";
     document.getElementById("ganador").style.transform =
       "translate(-50%, -50%)";
-    document.getElementById("ganador").style.backgroundColor =
-      "rgba(255, 255, 255, 0.616)";
+    document.getElementById("ganador").style.backgroundColor = "white";
     document.getElementById("ganador").style.textAlign = "center";
     document.getElementById("ganador").style.fontSize = "72px";
-    document.getElementById("ganador").style.color = "#3f3f3f";
-    document.getElementById("ganador").style.marginLeft = "5%";
     contador = 0;
   }
 }
