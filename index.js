@@ -1,67 +1,67 @@
 const array = [
   {
     dibujo: "dibujo1",
-    imagen: "img/01.jpg",
+    imagen: "img/01.png",
   },
   {
     dibujo: "dibujo1",
-    imagen: "img/01.jpg",
+    imagen: "img/01.png",
   },
   {
     dibujo: "dibujo2",
-    imagen: "img/02.jpg",
+    imagen: "img/02.png",
   },
   {
     dibujo: "dibujo2",
-    imagen: "img/02.jpg",
+    imagen: "img/02.png",
   },
   {
     dibujo: "dibujo3",
-    imagen: "img/03.jpg",
+    imagen: "img/03.png",
   },
   {
     dibujo: "dibujo3",
-    imagen: "img/03.jpg",
+    imagen: "img/03.png",
   },
   {
     dibujo: "dibujo4",
-    imagen: "img/04.jpg",
+    imagen: "img/04.png",
   },
   {
     dibujo: "dibujo4",
-    imagen: "img/04.jpg",
+    imagen: "img/04.png",
   },
   {
     dibujo: "dibujo5",
-    imagen: "img/05.jpg",
+    imagen: "img/05.png",
   },
   {
     dibujo: "dibujo5",
-    imagen: "img/05.jpg",
+    imagen: "img/05.png",
   },
   {
     dibujo: "dibujo6",
-    imagen: "img/06.jpg",
+    imagen: "img/06.png",
   },
   {
     dibujo: "dibujo6",
-    imagen: "img/06.jpg",
+    imagen: "img/06.png",
   },
   {
     dibujo: "dibujo7",
-    imagen: "img/07.jpg",
+    imagen: "img/07.png",
   },
   {
     dibujo: "dibujo7",
-    imagen: "img/07.jpg",
+    imagen: "img/07.png",
   },
   {
     dibujo: "dibujo8",
-    imagen: "img/08.jpg",
+    imagen: "img/08.png",
   },
   {
     dibujo: "dibujo8",
-    imagen: "img/08.jpg",
+    imagen: "img/08.png",
   },
 ];
 
@@ -84,7 +84,7 @@ function mostrarCarta(i) {
 }
 
 function ocultarCarta(i) {
-  document.getElementById(i).style.backgroundImage = "url('img/reverso.jpg')";
+  document.getElementById(i).style.backgroundImage = "url('img/reverso.png')";
 }
 
 function elegirCarta(i) {
